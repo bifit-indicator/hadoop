@@ -388,6 +388,7 @@ public class DirectoryScanner implements Runnable {
    * Scan only the "finalized blocks" lists of both disk and memory.
    */
   private void scan() {
+    LOG.info("START SCAN");
     clear();
     Map<String, ScanInfo[]> diskReport = getDiskReport();
 
@@ -470,6 +471,7 @@ public class DirectoryScanner implements Runnable {
         }
         LOG.info(statsRecord.toString());
       } //end for
+      LOG.info("END SCAN");
   }
 
   /**
